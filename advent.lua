@@ -11,7 +11,18 @@ function _G.new()
   data = {n = 0}
 end
 
-function _G.addLine(line)
+function _G.read()
+  local _data = {n = 0}
+  
+  for line in io.lines("input.txt") do
+    _data.n = _data.n + 1
+    _data[_data.n] = line
+  end
+
+  return _data
+end
+
+function _G.write(line)
   data.n = data.n + 1
   data[data.n] = line
 end
