@@ -5,15 +5,15 @@ if not day or not problem then
   error("Bruh you are idiot like BIG idiot!", 0)
 end
 
-local data = {}
+local data = {n = 0}
 
 function _G.new()
   data = {n = 0}
 end
 
-function _G.read()
+function _G.input()
   local _data = {n = 0}
-  
+
   for line in io.lines("input.txt") do
     _data.n = _data.n + 1
     _data[_data.n] = line
@@ -22,7 +22,7 @@ function _G.read()
   return _data
 end
 
-function _G.write(line)
+function _G.output(line)
   data.n = data.n + 1
   data[data.n] = line
 end
