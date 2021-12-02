@@ -14,7 +14,7 @@ end
 function _G.input()
   local _data = {n = 0}
 
-  for line in io.lines("input.txt") do
+  for line in io.lines(string.format("day%d/input.txt", day)) do
     _data.n = _data.n + 1
     _data[_data.n] = line
   end
