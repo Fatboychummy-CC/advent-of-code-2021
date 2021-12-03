@@ -30,7 +30,7 @@ end
 function _G.finalize()
   local h = io.open("output.txt", 'w')
   for i = 1, data.n do
-    h:write(data[i])
+    h:write(data[i] .. '\n')
   end
   h:close()
 end
