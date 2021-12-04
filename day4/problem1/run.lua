@@ -50,10 +50,28 @@ local function newBoard(inputStart)
     board = boardData,
     lookup = lookup,
 
+    -- Sum method will check through this entire board and sum all of the items that are false.
+    Sum = function(self)
+      checkself(self)
+
+      local sum = 0
+
+      -- for each position
+      for y = 1, 5 do
+        for x = 1, 5 do
+          -- check if it's been marked, and if not add to sum.
+          if not self.board[y][x][1] then
+            sum = sum + self.board[y][x][2]
+          end
+        end
+      end
+
+      return sum
+    end,
+
     -- Check method will check if this board has won, given a change at x,y position.
     Check = function(self, x, y)
       checkself(self)
-      local sum = 0
 
       -- check horizontal
       local horiWon = true
@@ -66,11 +84,7 @@ local function newBoard(inputStart)
 
       -- If we won, compute sum.
       if horiWon then
-        for i = 1, 5 do
-          sum = sum + self.board[y][i][2]
-        end
-
-        return true, sum
+        return true, self:Sum()
       end
 
       -- check vertical
@@ -84,12 +98,10 @@ local function newBoard(inputStart)
 
       -- If we won, compute sum.
       if vertiWon then
-        for i = 1, 5 do
-          sum = sum + self.board[i][x][2]
-        end
-
-        return true, sum
+        return true, self:Sum()
       end
+
+      return false
     end,
 
     -- Mark method will mark
@@ -176,7 +188,7 @@ end
 
 local sum, num, boardNumber = runGame()
 
-print(string.format("Board #%d has won, with line sum of %d. The last number called was %d.", boardNumber, sum, num))
+print(string.format("Board #%d has won, with unmarked sum of %d. The last number called was %d.", boardNumber, sum, num))
 print(string.format("The winning score is: %d", sum * num))
 
 -- mark this data to be written to file (for easy copy/paste)
