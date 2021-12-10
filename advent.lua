@@ -6,9 +6,11 @@ if not day or not problem then
 end
 
 local data = {n = 0}
+local startTime = os.epoch("utc")
 
 function _G.new()
   data = {n = 0}
+  startTime = os.epoch("utc")
 end
 
 function _G.input()
@@ -25,6 +27,20 @@ end
 function _G.output(line)
   data.n = data.n + 1
   data[data.n] = line
+end
+
+local function writeValue(name, value)
+  term.setTextColor(colors.yellow)
+  write(string.format("%s: ", name))
+  term.setTextColor(colors.white)
+  print(value)
+end
+
+function _G.finalOutput(data)
+  local endTime = os.epoch("utc")
+  print()
+  writeValue("Result", data)
+  writeValue("Time  ", (endTime - startTime) / 1000)
 end
 
 function _G.finalize()
