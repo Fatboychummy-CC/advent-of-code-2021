@@ -101,6 +101,7 @@ for i = 1, lines.n do
 end
 
 print("Done. Got", count, "overlaps.")
+finalOutput(count)
 output(tostring(count))
 
 --[[

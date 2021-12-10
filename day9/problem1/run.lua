@@ -90,6 +90,8 @@ for i = 1, mins.n do
 end
 
 print("Sum of minimums is", sum)
+finalOutput(sum)
 output(tostring(sum))
+
 
 finalize()

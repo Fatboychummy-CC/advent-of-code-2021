@@ -44,7 +44,7 @@ for i = 1, 9 do
 end
 
 print("After", totalDays, "days, there are", sum, "total Lanternfish.")
-
+finalOutput(sum)
 output(tostring(sum))
 
 finalize()

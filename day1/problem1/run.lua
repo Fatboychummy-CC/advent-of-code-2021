@@ -18,7 +18,7 @@ for i = 1, data.n do
 end
 
 print("Finished, got:", count)
-
+finalOutput(count)
 output(tostring(count))
 
 finalize()

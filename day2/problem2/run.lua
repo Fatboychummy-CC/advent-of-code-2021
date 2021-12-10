@@ -25,6 +25,7 @@ for i = 1, data.n do
 end
 
 print("Finished, got", tostring(x * y))
+finalOutput(x * y)
 output(tostring(x * y))
 
 finalize()

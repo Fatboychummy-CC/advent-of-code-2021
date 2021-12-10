@@ -173,6 +173,7 @@ for i = 1, 3 do
 end
 
 print(string.format("Maximum 3 multiplied together is: %d * %d * %d = %d", most[1], most[2], most[3], most[1] * most[2] * most[3]))
+finalOutput(most[1] * most[2] * most[3])
 output(tostring(most[1] * most[2] * most[3]))
 
 finalize()

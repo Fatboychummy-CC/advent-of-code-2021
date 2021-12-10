@@ -72,6 +72,7 @@ end
 
 print("Done. Got", oxyRating[1], "and", co2Rating[1])
 print(tonumber(oxyRating[1], 2) * tonumber(co2Rating[1], 2))
+finalOutput(tonumber(oxyRating[1], 2) * tonumber(co2Rating[1], 2))
 output(tostring(tonumber(oxyRating[1], 2) * tonumber(co2Rating[1], 2)))
 
 finalize()

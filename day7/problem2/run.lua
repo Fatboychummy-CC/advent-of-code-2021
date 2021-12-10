@@ -43,6 +43,7 @@ for i = min, max do
 end
 
 print("By moving the crabs to position", minPos, "we will use the minimum amount of fuel (", minDiff, ")")
+finalOutput(minDiff)
 output(tostring(minDiff))
 
 finalize()

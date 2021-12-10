@@ -26,6 +26,7 @@ end
 
 print("There are", count, "1s, 4s, 7s or 8s in the outputs.")
 
+finalOutput(count)
 output(tostring(count))
 
 finalize()

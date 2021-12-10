@@ -201,6 +201,7 @@ local sum, num = runGame()
 
 print(string.format("We have detected which board wins last, but it's ID is unimportant apparently. It has an unmarked sum of %d. The last number called was %d.", sum, num))
 print(string.format("The winning score is: %d", sum * num))
+finalOutput(sum * num)
 
 -- mark this data to be written to file (for easy copy/paste)
 output(tostring(sum * num))

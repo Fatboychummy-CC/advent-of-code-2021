@@ -37,6 +37,7 @@ print("x")
 print(epsilon)
 print("----------")
 print(result)
+finalOutput(result)
 output(result)
 
 finalize()

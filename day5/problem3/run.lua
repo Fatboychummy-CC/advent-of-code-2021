@@ -90,6 +90,7 @@ end
 term.redirect(old)
 
 print("Done. Got", count, "overlaps.")
+finalOutput(count)
 output(tostring(count))
 
 --[[

@@ -26,7 +26,7 @@ for _ = 1, 80 do
 end
 
 print("After 80 days, there are", fish.n, "total Lanternfish.")
-
+finalOutput(fish.n)
 output(tostring(fish.n))
 
 finalize()
